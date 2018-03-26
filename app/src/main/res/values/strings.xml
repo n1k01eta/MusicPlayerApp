@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MusicPlayerApp</string>
+
+    <!-- Category name for the Artists [CHAR LIMIT=20] -->
+    <string name="category_artists">Artists</string>
+
+    <!-- Category name for the Albums [CHAR LIMIT=20] -->
+    <string name="category_albums">Albums</string>
+
+    <!-- Category name for the Songs [CHAR LIMIT=20] -->
+    <string name="category_songs">Songs</string>
+
+    <!-- Category name for the Genres [CHAR LIMIT=20] -->
+    <string name="category_genres">Genres</string>
+
+    <!-- Category name for the Playlists [CHAR LIMIT=20] -->
+    <string name="category_playlists">Playlists</string>
+
+    <!-- Category name for the Search [CHAR LIMIT=20] -->
+    <string name="category_search">Search</string>
+
+    <string name="new_playlist">Create New Playlist</string>
+
+    <string name="name_playlist">Playlist Name</string>
+
+    <string name="done">Done</string>
+</resources>
