@@ -1,9 +1,12 @@
 package com.example.android.musicplayerapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,11 +21,18 @@ public class GenresActivity extends AppCompatActivity {
         Bundle bundleObject = getIntent().getExtras();
         ArrayList<Track> genres = (ArrayList<Track>) bundleObject.getSerializable("myTracks");
 
+        //when TextView "Home" is pressed the MainActivity opens
+        TextView home = findViewById(R.id.genres_home);
+        home.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(GenresActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
         //removing from the genres array any multiple genre
-
-
-        Log.i("genres size is", Integer.toString(genres.size()));
-
         for (int i = 0; i < genres.size() - 1; i++) {
             for (int j = i + 1; j < genres.size(); j++) {
                 String genres1 = genres.get(i).getmGenre();
@@ -44,10 +54,12 @@ public class GenresActivity extends AppCompatActivity {
         GenresAdapter adapter = new GenresAdapter(this, genres);
 
         // Find the ListView object.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list_genres);
 
         // Make the  ListView use the ArrayAdapter we created above, so that the
         // ListView will display list items for each album in the list of genres.
         listView.setAdapter(adapter);
+
+
     }
 }

@@ -7,6 +7,20 @@
     android:orientation="vertical"
     tools:context="com.example.android.musicplayerapp.NewPlaylistActivity">
 
+    <TextView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:background="@color/category_playlists"
+        android:padding="8dp"
+        android:text="@string/home"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_dark_color"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/playlist_name"
         android:layout_width="match_parent"
@@ -39,5 +53,6 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin" />
+
 
 </LinearLayout>

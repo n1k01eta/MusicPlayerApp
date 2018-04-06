@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class NewPlaylistActivity extends AppCompatActivity {
 
+    EditText playlistViewName;
     private ArrayList<Playlist> playlist;
     private ArrayList<Track> tracks;
-    EditText playlistViewName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class NewPlaylistActivity extends AppCompatActivity {
         SongsAdapter adapter = new SongsAdapter(this, tracks);
 
         // Find the ListView object.
-        ListView listView = (ListView) findViewById(R.id.list_new_playlist);
+        ListView listView = findViewById(R.id.list_new_playlist);
 
         // Make the  ListView use the ArrayAdapter we created above, so that the
         // ListView will display list items for each album in the new playlist.
@@ -38,7 +38,7 @@ public class NewPlaylistActivity extends AppCompatActivity {
 
 
         // Find the View done
-        TextView done = (TextView) findViewById(R.id.done);
+        TextView done = findViewById(R.id.done);
 
         // Set a click listener on that View
         done.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +46,7 @@ public class NewPlaylistActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Find the EditText View and add a new item to the Playlist Array
-                playlistViewName = (EditText) findViewById(R.id.playlist_name);
+                playlistViewName = findViewById(R.id.playlist_name);
                 String playlistName = playlistViewName.getText().toString();
 
 
@@ -64,6 +64,17 @@ public class NewPlaylistActivity extends AppCompatActivity {
                 doneIntent.putExtras(bundleTracks);
                 startActivity(doneIntent);
             }
+        });
+
+        TextView home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(NewPlaylistActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+
         });
     }
 }
