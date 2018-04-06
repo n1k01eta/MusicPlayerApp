@@ -66,15 +66,6 @@ public class NewPlaylistActivity extends AppCompatActivity {
             }
         });
 
-        TextView home = findViewById(R.id.home);
-        home.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
-                Intent intent = new Intent(NewPlaylistActivity.this, MainActivity.class);
-                startActivity(intent);
-
-            }
-
-        });
     }
 }

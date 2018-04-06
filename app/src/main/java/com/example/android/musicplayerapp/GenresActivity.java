@@ -21,16 +21,7 @@ public class GenresActivity extends AppCompatActivity {
         Bundle bundleObject = getIntent().getExtras();
         ArrayList<Track> genres = (ArrayList<Track>) bundleObject.getSerializable("myTracks");
 
-        //when TextView "Home" is pressed the MainActivity opens
-        TextView home = findViewById(R.id.genres_home);
-        home.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(GenresActivity.this, MainActivity.class);
-                startActivity(intent);
 
-            }
-
-        });
 
         //removing from the genres array any multiple genre
         for (int i = 0; i < genres.size() - 1; i++) {
@@ -54,7 +45,7 @@ public class GenresActivity extends AppCompatActivity {
         GenresAdapter adapter = new GenresAdapter(this, genres);
 
         // Find the ListView object.
-        ListView listView = findViewById(R.id.list_genres);
+        ListView listView = findViewById(R.id.list);
 
         // Make the  ListView use the ArrayAdapter we created above, so that the
         // ListView will display list items for each album in the list of genres.
