@@ -27,19 +27,18 @@ public class PlaylistsActivity extends AppCompatActivity {
 
         //Create a default Playlist to avoid Null Pointer Exception
 
-
         // Create an ArrayAdapter, whose data source is a list.
         PlaylistAdapter adapter = new PlaylistAdapter(this, playlist);
 
         // Find the ListView object.
-        ListView listView = (ListView) findViewById(R.id.playlist_list);
+        ListView listView = findViewById(R.id.playlist_list);
 
         // Make the  ListView use the ArrayAdapter we created above, so that the
         // ListView will display list items for each album in the list of playlists.
         listView.setAdapter(adapter);
 
         // Find the View that creates a new playlist
-        TextView create = (TextView) findViewById(R.id.new_playlist);
+        TextView create = findViewById(R.id.new_playlist);
 
         // Set a click listener on that View
         create.setOnClickListener(new View.OnClickListener() {
@@ -56,9 +55,5 @@ public class PlaylistsActivity extends AppCompatActivity {
                 startActivity(createIntent);
             }
         });
-
-
     }
-
-
 }

@@ -26,9 +26,8 @@ public class SearchActivity extends AppCompatActivity {
         songs = (ArrayList<Track>) bundleObject.getSerializable("myTracks");
         mySearchTrack = (ArrayList<Track>) bundleObject.getSerializable("mySearchTracks");
 
-
         // Find the View that creates a new playlist
-        TextView searchView = (TextView) findViewById(R.id.search_view);
+        TextView searchView = findViewById(R.id.search_view);
 
         // Set a click listener on that View
         searchView.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +35,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //it reads the query search and passes it into a String to compare it afterwards with all fields of the track
-                SearchView searchFrame = (SearchView) findViewById(R.id.search_frame);
+                SearchView searchFrame = findViewById(R.id.search_frame);
                 String searchText = searchFrame.getQuery().toString();
                 searchFrame.setQueryHint("Search");
 
@@ -45,7 +44,6 @@ public class SearchActivity extends AppCompatActivity {
                 searchTrack = new ArrayList<Track>();
                 int size = songs.size();
                 for (int i = 0; i < size; i++) {
-
                     if (searchText.equals(songs.get(i).getmTitle())
                             | searchText.equals(songs.get(i).getmArtist())
                             | searchText.equals(songs.get(i).getmAlbum())
@@ -75,12 +73,10 @@ public class SearchActivity extends AppCompatActivity {
         SearchAdapter adapter = new SearchAdapter(this, mySearchTrack);
 
         // Find the ListView object.
-        ListView listView = (ListView) findViewById(R.id.list_search_playlist);
+        ListView listView = findViewById(R.id.list_search_playlist);
 
         // Make the  ListView use the ArrayAdapter we created above, so that the
         // ListView will display list items for each album in the tracks.
         listView.setAdapter(adapter);
-
-
     }
 }

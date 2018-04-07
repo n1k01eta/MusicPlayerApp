@@ -30,9 +30,8 @@ public class AlbumsAdapter extends ArrayAdapter<Track> {
         Track currentTrack = getItem(position);
 
         // Find the TextView in the simple_list.xml layout with the ID simple_view
-        TextView albumsTextView = (TextView) listItemView.findViewById(R.id.simple_view);
+        TextView albumsTextView = listItemView.findViewById(R.id.simple_view);
         albumsTextView.setText(currentTrack.getmAlbum());
-
         return listItemView;
 
     }

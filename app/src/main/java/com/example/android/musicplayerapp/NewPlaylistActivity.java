@@ -1,8 +1,8 @@
 package com.example.android.musicplayerapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -36,7 +36,6 @@ public class NewPlaylistActivity extends AppCompatActivity {
         // ListView will display list items for each album in the new playlist.
         listView.setAdapter(adapter);
 
-
         // Find the View done
         TextView done = findViewById(R.id.done);
 
@@ -49,10 +48,11 @@ public class NewPlaylistActivity extends AppCompatActivity {
                 playlistViewName = findViewById(R.id.playlist_name);
                 String playlistName = playlistViewName.getText().toString();
 
-
-                //Here should be a block of lines that will add selected tracks to the newTracks ArrayList
-                //ArrayList<Track> newTracks = new ArrayList<Track>();
-                //newTracks = tracks;
+                /*
+                * Here should be a block of lines that will add selected tracks to the newTracks ArrayList
+                * ArrayList<Track> newTracks = new ArrayList<Track>();
+                * newTracks = tracks;
+                */
 
                 playlist.add(new Playlist(playlistName, tracks));
                 Intent doneIntent = new Intent(NewPlaylistActivity.this, PlaylistsActivity.class);
@@ -65,7 +65,5 @@ public class NewPlaylistActivity extends AppCompatActivity {
                 startActivity(doneIntent);
             }
         });
-
-
     }
 }

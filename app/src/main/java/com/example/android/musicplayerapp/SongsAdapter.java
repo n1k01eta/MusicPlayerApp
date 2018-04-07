@@ -30,18 +30,16 @@ public class SongsAdapter extends ArrayAdapter<Track> {
         Track currentTrack = getItem(position);
 
         // Find the TextView in the song_list.xml layout with the ID title_view
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_view);
+        TextView titleTextView = listItemView.findViewById(R.id.title_view);
         titleTextView.setText(currentTrack.getmTitle());
 
         //Find the TextView in the song_list.xml layout with the ID artist_view
-        TextView artistTextView = (TextView) listItemView.findViewById(R.id.simple_view);
+        TextView artistTextView = listItemView.findViewById(R.id.simple_view);
         artistTextView.setText(currentTrack.getmArtist());
 
         //Find the TextView in the song_list.xml layout with the ID duration_view
-        TextView durationTextView = (TextView) listItemView.findViewById(R.id.duration_view);
+        TextView durationTextView = listItemView.findViewById(R.id.duration_view);
         durationTextView.setText(currentTrack.getmDuration());
-
         return listItemView;
-
     }
 }

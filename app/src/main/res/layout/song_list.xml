@@ -50,5 +50,4 @@
         android:paddingLeft="4dp"
         android:src="@drawable/play" />
 
-
 </LinearLayout>

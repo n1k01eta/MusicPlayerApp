@@ -13,7 +13,6 @@ public class Playlist implements Serializable {
     private ArrayList<Track> songs;
 
     public Playlist(String title, ArrayList<Track> tracks) {
-
         name = title;
         songs = tracks;
     }

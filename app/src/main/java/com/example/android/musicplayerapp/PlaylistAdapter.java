@@ -30,10 +30,8 @@ public class PlaylistAdapter extends ArrayAdapter<Playlist> {
         Playlist currentPlaylist = getItem(position);
 
         // Find the TextView in the simple_listxml layout with the ID simple_view
-        TextView playlistTextView = (TextView) listItemView.findViewById(R.id.simple_view);
+        TextView playlistTextView = listItemView.findViewById(R.id.simple_view);
         playlistTextView.setText(currentPlaylist.getPlaylistName());
-
         return listItemView;
-
     }
 }

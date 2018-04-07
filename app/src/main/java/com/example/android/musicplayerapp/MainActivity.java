@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private static ArrayList<Track> tracks;
     private ArrayList<Playlist> playlistArray;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         tracks.add(new Track("Jazzdancer", "Mop Mop", "Kiss of Kali", "Jazz", "12:57"));
 
         // Find the View that shows the songs category
-        TextView songs = (TextView) findViewById(R.id.songs);
+        TextView songs = findViewById(R.id.songs);
 
         // Set a click listener on that View
         songs.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the artists category
-        TextView artists = (TextView) findViewById(R.id.artists);
+        TextView artists = findViewById(R.id.artists);
 
         // Set a click listener on that View
         artists.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the genres category
-        TextView genres = (TextView) findViewById(R.id.genres);
+        TextView genres = findViewById(R.id.genres);
 
         // Set a click listener on that View
         genres.setOnClickListener(new View.OnClickListener() {
@@ -125,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the albums category
-        TextView albums = (TextView) findViewById(R.id.albums);
+        TextView albums = findViewById(R.id.albums);
 
         // Set a click listener on that View
         albums.setOnClickListener(new View.OnClickListener() {
@@ -141,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the playlist category
-        TextView playlist = (TextView) findViewById(R.id.playlist);
+        TextView playlist = findViewById(R.id.playlist);
 
         playlistArray = new ArrayList<Playlist>();
         //creating a default Playlist with all the tracks, in order to avoi NullPointerException error
@@ -164,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the search category
-        TextView search = (TextView) findViewById(R.id.search);
+        TextView search = findViewById(R.id.search);
 
         // Set a click listener on that View
         search.setOnClickListener(new View.OnClickListener() {
@@ -183,7 +182,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(searchIntent);
             }
         });
-
     }
-
 }

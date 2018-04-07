@@ -11,8 +11,8 @@ public class SongsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.track_list);
+
         //retrieve the ArrayList of tracks from the previous activity into the variable songs
         Bundle bundleObject = getIntent().getExtras();
         ArrayList<Track> songs = (ArrayList<Track>) bundleObject.getSerializable("myTracks");
@@ -21,7 +21,7 @@ public class SongsActivity extends AppCompatActivity {
         SongsAdapter adapter = new SongsAdapter(this, songs);
 
         // Find the View that creates a new playlist
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the  ListView use the ArrayAdapter we created above, so that the
         // ListView will display list items for each album in the list of songs.

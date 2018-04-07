@@ -26,28 +26,22 @@ public class ArtistsActivity extends AppCompatActivity {
             for (int j = i + 1; j < artists.size(); j++) {
                 String artist1 = artists.get(i).getmArtist();
                 String artist2 = artists.get(j).getmArtist();
-                Log.i("artist1", "i is " + i + " j is " + j + " compare " + artist1);
-                Log.i("artist2", "i is " + i + " j is " + j + " compare " + artist2);
                 if (artist1.equals(artist2)) {
-                    Log.i("remove", "i is " + i + " j is " + j + " remove " + artist2);
                     artists.remove(j);
                     j = j - 1;
-
                 }
-
             }
-
-
         }
 
         // Create an ArrayAdapter, whose data source is a list.
         ArtistsAdapter adapter = new ArtistsAdapter(this, artists);
 
         // Find the ListView object.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
-        // Make the  ListView use the ArrayAdapter we created above, so that the
-        // ListView will display list items for each album in the list of artists.
+        /* Make the  ListView use the ArrayAdapter we created above, so that the
+        * ListView will display list items for each album in the list of artists.
+        */
         listView.setAdapter(adapter);
     }
 }

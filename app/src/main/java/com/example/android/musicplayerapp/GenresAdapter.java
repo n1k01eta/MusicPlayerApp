@@ -30,10 +30,8 @@ public class GenresAdapter extends ArrayAdapter<Track> {
         Track currentTrack = getItem(position);
 
         // Find the TextView in the simple_listxml layout with the ID simple_view
-        TextView genresTextView = (TextView) listItemView.findViewById(R.id.simple_view);
+        TextView genresTextView = listItemView.findViewById(R.id.simple_view);
         genresTextView.setText(currentTrack.getmGenre());
-
         return listItemView;
-
     }
 }
